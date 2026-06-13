@@ -1,0 +1,178 @@
+%-------------------------
+% Resume in Latex (Improved Version)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Colors
+\definecolor{DeepNavy}{RGB}{0, 51, 102}
+\definecolor{Charcoal}{RGB}{43, 43, 43}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section style
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large\bfseries\color{DeepNavy}
+}{}{0em}{}[\color{DeepNavy}\titlerule\vspace{-4pt}]
+
+\pdfgentounicode=1
+
+% Commands
+\newcommand{\resumeItem}[1]{
+  \item\small{\color{Charcoal} #1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{Charcoal}#1} & \small\color{Charcoal}#2 \\
+      \textit{\small\color{Charcoal}#3} & \textit{\small\color{Charcoal}#4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \small\color{Charcoal}#2 \\
+  \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape \color{DeepNavy} Amirmohammad Ganjizade} \\ \vspace{4pt}
+
+    \small \color{Charcoal}
+    Yazd, Iran $|$ (+98) 990-916-5872 \\
+    \href{mailto:amir.futurefight@gmail.com}{\color{DeepNavy}amir.futurefight@gmail.com} $|$
+    \href{https://github.com/AmirGjzh}{\color{DeepNavy}GitHub} $|$
+    \href{https://www.linkedin.com/in/amirmohammad-ganjizade-466673202}{\color{DeepNavy}LinkedIn} $|$
+    \href{https://codeforces.com/profile/Amirgjz}{\color{DeepNavy}Codeforces}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{\color{Charcoal}
+Computer Engineering student at Shahid Beheshti University. Interested in backend development, software engineering, and competitive programming. Experienced in C/C++, Python, PHP/Laravel, and developer tooling. Active ICPC participant with strong algorithmic problem-solving background.
+}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Shahid Beheshti University}{Tehran, Iran}
+    {B.Sc. in Computer Engineering}{2023 -- Present}
+\resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{\href{https://drive.google.com/file/d/1X7oklmO_deDBaDLUG-byg9I3li6gBwtK/view?usp=drive_link}{\color{DeepNavy}ICPC Asia Tehran Regional Contest 2025}} $|$ Ranked 8th}{Dec 2025}
+
+\resumeProjectHeading
+{\textbf{\href{https://drive.google.com/file/d/1SNrWG3Zz8XNg3bkr_pAe7U-nIayHGIY9/view?usp=drive_link}{\color{DeepNavy}ICPC Asia Tehran Regional Contest 2024}} $|$ Ranked 11th}{Dec 2024}
+
+\resumeProjectHeading
+{\textbf{\href{https://quera.org/certificate/VizNfGU4/}{\color{DeepNavy}Technology Olympiad}} $|$ Finalist (Algorithm)}{2025}
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{\href{https://github.com/AmirGjzh/Starvel}{\color{DeepNavy}Starvel}} $|$ Laravel - PowerShell}{}
+\resumeItemListStart
+\resumeItem{Portable Laravel environment for Windows without system-wide installation.}
+\resumeItem{Wrapper scripts for PHP, Node.js, Composer, MySQL, and Mailpit.}
+\resumeItem{Multi-version support for PHP and Node.js with easy switching.}
+\resumeItem{Fully isolated environment for configs, caches, and dependencies.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\href{https://github.com/AmirGjzh/Text-Compressor}{\color{DeepNavy}Text Compressor}} $|$ C - Huffman Coding}{}
+\resumeItemListStart
+\resumeItem{Implemented file compression using Huffman coding in C.}
+\resumeItem{Built custom binary tree and priority queue from scratch.}
+\resumeItem{Designed CLI for compression and decompression workflows.}
+\resumeItem{Handled low-level memory management and file I/O.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\href{https://github.com/AmirGjzh/XOShift-Game}{\color{DeepNavy}XOShift Game AI}} $|$ Python - Minimax AI}{}
+\resumeItemListStart
+\resumeItem{Developed XOShift game with human and AI players.}
+\resumeItem{Implemented Minimax with Alpha-Beta pruning and iterative deepening.}
+\resumeItem{Used Zobrist hashing and transposition tables for optimization.}
+\resumeItem{Built replay and agent comparison framework.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{
+\item{
+\textbf{Languages}{: C, C++, Python, PHP, Java, JavaScript, SQL} \\[3pt]
+\textbf{Tools}{: Laravel, Livewire, TailwindCSS, FastAPI} \\[3pt]
+\textbf{Concepts}{: Algorithms, Data Structures, OOP, Problem Solving}
+}}
+\end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{\href{https://quera.org/certificate/TcQVQ4I4/}{\color{DeepNavy}Laravel Backend Development}}}{Quera College}
+
+\resumeProjectHeading
+{\textbf{\href{https://quera.org/certificate/r3OmlCz9/}{\color{DeepNavy}Database Design \& SQL}}}{Quera College}
+
+\resumeProjectHeading
+{\textbf{\href{https://quera.org/certificate/S9oxW8QS/}{\color{DeepNavy}Front-End Foundations}}}{Quera College}
+
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
