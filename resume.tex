@@ -4,27 +4,19 @@
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage{tabularx}
 \input{glyphtounicode}
 
 % Colors
 \definecolor{DeepNavy}{RGB}{0, 51, 102}
 \definecolor{Charcoal}{RGB}{43, 43, 43}
 
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\hypersetup{pdftitle={Amirmohammad Ganjizade -- Resume}, pdfauthor={Amirmohammad Ganjizade}}
 
 % Margins
 \addtolength{\oddsidemargin}{-0.5in}
@@ -40,8 +32,10 @@
 
 % Section style
 \titleformat{\section}{
-  \vspace{-3pt}\scshape\raggedright\large\bfseries\color{DeepNavy}
+  \scshape\raggedright\large\bfseries\color{DeepNavy}
 }{}{0em}{}[\color{DeepNavy}\titlerule\vspace{-4pt}]
+
+\titlespacing*{\section}{0pt}{11pt}{8pt}
 
 \pdfgentounicode=1
 
@@ -52,17 +46,17 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\color{Charcoal}#1} & \small\color{Charcoal}#2 \\
       \textit{\small\color{Charcoal}#3} & \textit{\small\color{Charcoal}#4} \\
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\par\vspace{-5pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
   \item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
     \small#1 & \small\color{Charcoal}#2 \\
-  \end{tabular*}\vspace{-6pt}
+  \end{tabular*}\par\vspace{-5pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -81,14 +75,13 @@
     Yazd, Iran $|$ (+98) 990-916-5872 \\
     \href{mailto:amir.futurefight@gmail.com}{\color{DeepNavy}amir.futurefight@gmail.com} $|$
     \href{https://github.com/AmirGjzh}{\color{DeepNavy}GitHub} $|$
-    \href{https://www.linkedin.com/in/amirmohammad-ganjizade-466673202}{\color{DeepNavy}LinkedIn} $|$
-    \href{https://codeforces.com/profile/Amirgjz}{\color{DeepNavy}Codeforces}
+    \href{https://www.linkedin.com/in/amirmohammad-ganjizade-466673202}{\color{DeepNavy}LinkedIn}
 \end{center}
 
 %-----------SUMMARY-----------
 \section{Summary}
 \small{\color{Charcoal}
-Computer Engineering student at Shahid Beheshti University. Interested in backend development, software engineering, and competitive programming. Experienced in C/C++, Python, PHP/Laravel, and developer tooling. Active ICPC participant with strong algorithmic problem-solving background.
+Computer Engineering student at Shahid Beheshti University focusing on software engineering. Experienced in building end-to-end web applications and developer tooling---from architectural design and testing to dockerized deployment---leveraging an AI-assisted development workflow.
 }
 
 %-----------EDUCATION-----------
@@ -97,6 +90,26 @@ Computer Engineering student at Shahid Beheshti University. Interested in backen
   \resumeSubheading
     {Shahid Beheshti University}{Tehran, Iran}
     {B.Sc. in Computer Engineering}{2023 -- Present}
+\resumeSubHeadingListEnd\vspace{3pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Teaching Assistant}{Oct 2024 -- May 2025}
+    {Shahid Beheshti University, Faculty of Computer Science and Engineering}{Tehran, Iran}
+    \resumeItemListStart
+      \resumeItem{Authored dynamic programming assignments and automated test suites for Fundamentals of Programming (C) and Advanced Programming (Java), covering OOP principles and algorithmic problem-solving.}
+      \resumeItem{Evaluated student codebases for correctness, memory efficiency, and structural design standards across two semesters.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Problem Setter, Newbies Contest}{Nov 2025}
+    {Shahid Beheshti University, Faculty of Computer Science and Engineering}{Tehran, Iran}
+    \resumeItemListStart
+      \resumeItem{Designed and prepared 3 original algorithmic problems with comprehensive edge cases and validator scripts for an intra-faculty contest with $\sim$50 participants.}
+      \resumeItem{Configured problem environments, constraints, and test suites on DOMjudge to ensure robust automated judging.}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------ACHIEVEMENTS-----------
@@ -104,45 +117,48 @@ Computer Engineering student at Shahid Beheshti University. Interested in backen
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{\href{https://drive.google.com/file/d/1X7oklmO_deDBaDLUG-byg9I3li6gBwtK/view?usp=drive_link}{\color{DeepNavy}ICPC Asia Tehran Regional Contest 2025}} $|$ Ranked 8th}{Dec 2025}
+{\textbf{\href{https://drive.google.com/file/d/1X7oklmO_deDBaDLUG-byg9I3li6gBwtK/view?usp=drive_link}{\color{DeepNavy}ICPC Asia Tehran Regional Contest 2025}} $|$ Ranked 8th among 90+ teams from Iranian universities}{Dec 2025}
 
 \resumeProjectHeading
-{\textbf{\href{https://drive.google.com/file/d/1SNrWG3Zz8XNg3bkr_pAe7U-nIayHGIY9/view?usp=drive_link}{\color{DeepNavy}ICPC Asia Tehran Regional Contest 2024}} $|$ Ranked 11th}{Dec 2024}
+{\textbf{\href{https://drive.google.com/file/d/1SNrWG3Zz8XNg3bkr_pAe7U-nIayHGIY9/view?usp=drive_link}{\color{DeepNavy}ICPC Asia Tehran Regional Contest 2024}} $|$ Ranked 11th among 90+ teams from Iranian universities}{Dec 2024}
 
 \resumeProjectHeading
-{\textbf{\href{https://quera.org/certificate/VizNfGU4/}{\color{DeepNavy}Technology Olympiad}} $|$ Finalist (Algorithm)}{2025}
+{\textbf{\href{https://quera.org/certificate/VizNfGU4/}{\color{DeepNavy}Technology Olympiad}} $|$ National Finalist, Algorithm track}{Nov 2025}
 
-\resumeSubHeadingListEnd
+\resumeSubHeadingListEnd\vspace{3pt}
 
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{\href{https://github.com/AmirGjzh/Starvel}{\color{DeepNavy}Starvel}} $|$ Laravel - PowerShell}{}
+{\textbf{\href{https://github.com/AmirGjzh/Planner}{\color{DeepNavy}Planner}} $|$ Laravel $\cdot$ Livewire $\cdot$ Docker}{Jan 2026 -- Present}
 \resumeItemListStart
-\resumeItem{Portable Laravel environment for Windows without system-wide installation.}
-\resumeItem{Wrapper scripts for PHP, Node.js, Composer, MySQL, and Mailpit.}
-\resumeItem{Multi-version support for PHP and Node.js with easy switching.}
-\resumeItem{Fully isolated environment for configs, caches, and dependencies.}
+\resumeItem{Built a full-stack task planner using Laravel, Livewire, Tailwind CSS, and MariaDB, featuring workload-aware daily views, categories, plans, and performance reports.}
+\resumeItem{Added English/Persian support with a Jalali calendar and RTL layout, email verification via queue workers and Redis, and robust background job handling.}
+\resumeItem{Containerized development and production environments with Docker Compose and a custom CLI wrapper.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{\href{https://github.com/AmirGjzh/Text-Compressor}{\color{DeepNavy}Text Compressor}} $|$ C - Huffman Coding}{}
+{\textbf{\href{https://github.com/AmirGjzh/XOShift-Game}{\color{DeepNavy}XOShift Game AI}} $|$ Python $\cdot$ Minimax $\cdot$ Pygame}{Jun 2025}
 \resumeItemListStart
-\resumeItem{Implemented file compression using Huffman coding in C.}
-\resumeItem{Built custom binary tree and priority queue from scratch.}
-\resumeItem{Designed CLI for compression and decompression workflows.}
-\resumeItem{Handled low-level memory management and file I/O.}
+\resumeItem{Developed a two-player board game with a Pygame interface, three board sizes, human and agent modes, and JSON-based game replays.}
+\resumeItem{Built a competitive agent using Minimax with Alpha-Beta pruning, iterative deepening, and move ordering under a strict 2-second per-move limit.}
+\resumeItem{Accelerated search with Zobrist hashing and a transposition table, achieving a $\sim$99\% win rate against a random baseline.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\textbf{\href{https://github.com/AmirGjzh/XOShift-Game}{\color{DeepNavy}XOShift Game AI}} $|$ Python - Minimax AI}{}
+{\textbf{\href{https://github.com/AmirGjzh/Starvel}{\color{DeepNavy}Starvel}} $|$ PowerShell $\cdot$ Laravel}{May 2026}
 \resumeItemListStart
-\resumeItem{Developed XOShift game with human and AI players.}
-\resumeItem{Implemented Minimax with Alpha-Beta pruning and iterative deepening.}
-\resumeItem{Used Zobrist hashing and transposition tables for optimization.}
-\resumeItem{Built replay and agent comparison framework.}
+\resumeItem{Built a portable, Docker-free Laravel development environment for Windows, organizing PHP, Node.js, Composer, MySQL, and Mailpit within a single directory.}
+\resumeItem{Implemented side-by-side PHP and Node.js version switching using session-scoped PATH variables, isolated caches, and global packages.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\href{https://github.com/AmirGjzh/Text-Compressor}{\color{DeepNavy}Text Compressor}} $|$ C $\cdot$ Huffman Coding}{Jan 2023}
+\resumeItemListStart
+\resumeItem{Implemented Huffman coding in C with a custom binary tree, priority queue, and CLI, achieving up to $\sim$40\% size reduction on text files.}
+\resumeItem{Handled low-level file I/O and memory management, thoroughly tested on files up to 10 GB.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -152,27 +168,27 @@ Computer Engineering student at Shahid Beheshti University. Interested in backen
 \begin{itemize}[leftmargin=0.15in, label={}]
 \small{
 \item{
-\textbf{Languages}{: C, C++, Python, PHP, Java, JavaScript, SQL} \\[3pt]
-\textbf{Tools}{: Laravel, Livewire, TailwindCSS, FastAPI} \\[3pt]
-\textbf{Concepts}{: Algorithms, Data Structures, OOP, Problem Solving}
+\textbf{Languages}{: PHP, Java, SQL, C++} \\[3pt]
+\textbf{Web \& Backend}{: Laravel, Livewire, REST APIs, MariaDB/MySQL, Redis, Tailwind CSS, Alpine.js} \\[3pt]
+\textbf{Infrastructure \& Tools}{: Docker, Docker Compose, Git} \\[3pt]
+\textbf{AI-Assisted Development}{: Prompt-driven architecture design, AI-assisted code review and generation} \\[3pt]
+\textbf{Foundations}{: Algorithms, Data Structures, OOP}
 }}
 \end{itemize}
 
 %-----------CERTIFICATIONS-----------
 \section{Certifications}
-
-\resumeSubHeadingListStart
-
-\resumeProjectHeading
-{\textbf{\href{https://quera.org/certificate/TcQVQ4I4/}{\color{DeepNavy}Laravel Backend Development}}}{Quera College}
-
-\resumeProjectHeading
-{\textbf{\href{https://quera.org/certificate/r3OmlCz9/}{\color{DeepNavy}Database Design \& SQL}}}{Quera College}
-
-\resumeProjectHeading
-{\textbf{\href{https://quera.org/certificate/S9oxW8QS/}{\color{DeepNavy}Front-End Foundations}}}{Quera College}
-
-\resumeSubHeadingListEnd
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{
+\item{
+\textbf{Quera College}{: }
+\href{https://quera.org/certificate/TcQVQ4I4/}{\color{DeepNavy}Laravel Backend Development} $|$
+\href{https://quera.org/certificate/r3OmlCz9/}{\color{DeepNavy}Database Design \& SQL} $|$
+\href{https://quera.org/certificate/S9oxW8QS/}{\color{DeepNavy}Frontend Web Development} $|$
+\href{https://quera.org/certificate/nM3gJ7OA/}{\color{DeepNavy}PHP Web Development} $|$
+\href{https://quera.org/certificate/FlPv2wwu/}{\color{DeepNavy}Advanced Algorithms \& Data Structures}
+}}
+\end{itemize}
 
 %-------------------------------------------
 \end{document}
