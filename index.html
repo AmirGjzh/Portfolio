@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AmirMohammad Ganjizade</title>
+<meta name="description" content="Portfolio of AmirMohammad Ganjizade – Computer Engineering student interested in software engineering, web design and programming contests.">
+<meta name="theme-color" content="#eef8fc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232b78d6'/%3E%3Cstop offset='.6' stop-color='%230ea5a0'/%3E%3Cstop offset='1' stop-color='%2335c98a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='26' text-anchor='middle' fill='white'%3EAG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4fafb; --card:#ffffffcc; --ink:#17323a; --muted:#5d7b84; --line:#d5e8ec;
+  --blue:#3b82c4; --teal:#14a3a8; --green:#4cb58a; --sky:#e2f0fb; --mint:#e3f5ef;
+  --font:'Vazirmatn','Bricolage Grotesque',system-ui,sans-serif;
+  --head:'Bricolage Grotesque','Vazirmatn',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.8;overflow-x:hidden}
+html[lang=en] body{line-height:1.65}
+h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.2}
+html[lang=fa] h1,html[lang=fa] h2,html[lang=fa] h3{font-family:var(--font)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1020px;margin-inline:auto;padding-inline:24px}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:20;backdrop-filter:blur(14px);background:#f4fafbb3;border-bottom:1px solid #d5e8ec80}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font-family:var(--head);font-weight:800;letter-spacing:-.02em}
+.nav-links{display:flex;gap:22px;font-size:.92rem;color:var(--muted)}
+.nav-links a:hover{color:var(--teal)}
+.lang{position:relative;display:flex;background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px;direction:ltr}
+.lang button{position:relative;z-index:1;border:0;background:none;font:600 .82rem var(--head);padding:5px 14px;border-radius:99px;cursor:pointer;color:var(--muted);transition:color .3s}
+.lang button.on{color:#fff}
+.lang i{position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:99px;background:linear-gradient(135deg,var(--blue),var(--teal));transition:transform .4s cubic-bezier(.6,.1,.2,1)}
+.lang[data-l=en] i{transform:translateX(100%)}
+
+/* hero: the one big moment */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:drift 18s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:#9cd3f2;top:8%;left:-6%}
+.b2{width:380px;height:380px;background:#8fe3cf;bottom:-8%;right:4%;animation-delay:-6s}
+.b3{width:300px;height:300px;background:#b6e8c4;top:30%;right:30%;animation-delay:-11s}
+@keyframes drift{to{transform:translate(70px,-50px) scale(1.18)}}
+.hero .wrap{position:relative;padding-top:90px;padding-bottom:40px;text-align:center}
+.photo{width:min(240px,60vw);aspect-ratio:4/5;margin:0 auto 34px;border-radius:30px;object-fit:cover;display:grid;place-items:center;background:linear-gradient(150deg,#cfe6f7,#c9efe3);border:1px solid #fff;box-shadow:0 24px 50px -22px #14a3a860;opacity:0;animation:up 1s .05s forwards}
+.photo{position:relative;overflow:hidden}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo:not(.empty) span{display:none}
+.photo.empty img{display:none}
+.photo span{font:800 3.4rem var(--head);color:#ffffffd9;letter-spacing:-.04em}
+h1{font-size:clamp(2.1rem,7vw,4.2rem);letter-spacing:-.03em}
+h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-inline-end:.28em}
+h1 .w span{display:inline-block;transform:translateY(110%);animation:rise 1s cubic-bezier(.2,.8,.2,1) forwards;background:linear-gradient(120deg,var(--blue),var(--teal) 55%,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes rise{to{transform:none}}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.role{font-size:clamp(1.05rem,2.4vw,1.35rem);color:var(--muted);max-width:600px;margin:22px auto 0;opacity:0;animation:up .9s .9s forwards}
+
+/* sections */
+section{padding:56px 0}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:24px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;overflow:hidden;display:flex;flex-direction:column;gap:10px;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--c)}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 44px -24px #14a3a8}
+.card.big{grid-column:1/-1}
+.card h3{font-size:1.5rem}
+.prow{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.card p{color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.gh{align-self:flex-start;margin-top:6px;font-weight:600;color:var(--teal);border-bottom:1.5px solid transparent;transition:border-color .3s}
+.gh:hover{border-color:var(--teal)}
+.tags span{font:600 .8rem var(--head);padding:4px 13px;border-radius:99px;background:var(--sky);color:#2a6aa5;direction:ltr}
+.when{font-size:.85rem;color:var(--muted)}
+
+/* timeline */
+
+.edu{display:grid;grid-template-columns:1fr auto;grid-template-areas:"logo pill" "body body";gap:14px 20px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px 26px 24px;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.edu:hover{transform:translateY(-3px);box-shadow:0 18px 38px -22px #14a3a8}
+.edu>.uni{grid-area:logo;justify-self:start}
+.edu>.pill{grid-area:pill;justify-self:end;margin:0}
+.edu>div:not(.uni){grid-area:body}
+.edu h3{font-size:1.3rem;margin:0 0 4px}
+.edu p{color:var(--muted)}
+.bl::before{content:"•";margin-inline-end:.55em;color:var(--teal)}
+.gpa{margin-top:2px;font-weight:600;color:var(--teal)!important}
+.uni{position:relative;flex:none;width:68px;height:68px;display:grid;place-items:center}
+.uni img{width:100%;height:100%;object-fit:contain;display:block}
+.uni .ph{display:none}
+.uni.empty{border-radius:20px;background:linear-gradient(150deg,#d9ecf8,#d3f1e6);color:#4f8fa0;font-weight:600;font-size:.85rem}
+.uni.empty img{display:none}.uni.empty .ph{display:block}
+@media(max-width:560px){.edu{padding:20px}.uni{width:60px;height:60px}}
+.stack{display:grid;gap:16px}
+.pill{margin-inline-start:auto;flex:none;white-space:nowrap;padding:5px 15px;border-radius:99px;background:var(--sky);color:#2a6aa5;font-weight:600;font-size:.85rem}
+.achs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ach{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:14px 14px 22px;display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.ach:hover{transform:translateY(-3px);box-shadow:0 18px 38px -22px #14a3a8}
+.ach .pill{align-self:flex-start;margin:14px 6px 8px}
+.ach h3{font-size:1.15rem;margin:0 6px 2px}.ach p{color:var(--muted);margin-inline:6px}
+.ach:hover .thumb img{transform:scale(1.05)}
+.spot{position:relative;isolation:isolate;overflow:hidden}
+.thumb{display:block;width:100%;aspect-ratio:4/3;border:0;padding:0;border-radius:16px;overflow:hidden;cursor:zoom-in;background:linear-gradient(150deg,#d9ecf8,#d3f1e6);position:relative}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.thumb .ph{display:none;position:absolute;inset:0;place-items:center;color:#4f8fa0;font-weight:600;font-size:.9rem}
+.thumb.empty img{display:none}.thumb.empty .ph{display:grid}
+[hidden]{display:none!important}
+dialog{margin:auto;inset:0;border:0;border-radius:22px;padding:14px;background:#fff;max-width:min(940px,94vw);box-shadow:0 30px 80px -20px #0a3a4a80;color:var(--ink);font-family:var(--font)}
+dialog[open]{animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+dialog::backdrop{background:#0e2a3166;backdrop-filter:blur(6px)}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(10px)}}
+dialog img{display:block;max-width:100%;max-height:80vh;margin:auto;border-radius:12px}
+.mph{min-width:min(520px,78vw);min-height:300px;display:grid;place-items:center;color:var(--muted);background:linear-gradient(150deg,#d9ecf8,#d3f1e6);border-radius:12px}
+.x{position:absolute;top:10px;inset-inline-end:10px;z-index:2;width:38px;height:38px;border-radius:50%;border:0;background:#fffffff0;font-size:1.5rem;line-height:1;cursor:pointer;box-shadow:0 4px 14px #0003}
+footer{padding:56px 0 44px;text-align:center}
+footer h2{margin-bottom:28px}
+.links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:1020px;margin:0 auto}
+.lk{display:flex;align-items:center;gap:12px;padding:16px;border:1px solid var(--line);border-radius:22px;background:var(--card);text-align:start;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.lk:hover{transform:translateY(-3px);box-shadow:0 18px 38px -22px #14a3a8}
+.ic{flex:none;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff}
+.ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tx{display:grid;min-width:0}
+.lb{font-size:.85rem;color:var(--muted)}
+.v{display:inline-block;direction:ltr;unicode-bidi:isolate;font-weight:600;font-size:.85rem;overflow-wrap:anywhere}
+
+@media(max-width:760px){
+  .grid,.achs,.links{grid-template-columns:1fr}
+  .nav-links{display:none}
+  section{padding:40px 0}
+}
+@media(max-width:940px){.links{grid-template-columns:1fr;max-width:520px}}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01s!important;animation-delay:0s!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ===== v2 theme: richer colours, no cursor effects ===== */
+:root{--blue:#2b78d6;--teal:#0ea5a0;--green:#35c98a;--ink:#0d2b3a;--muted:#4a6b79;--line:#bfe0ec;--bg:#edf8fc;--sky:#d3e8ff;--mint:#d0f6e6}
+body{background:radial-gradient(900px 520px at 92% 0,#c6e2ff 0,transparent 62%),radial-gradient(800px 520px at 0 30%,#c4f3e3 0,transparent 62%),radial-gradient(900px 600px at 100% 72%,#cdeaff 0,transparent 62%),var(--bg);background-repeat:no-repeat}
+nav{background:#ffffffbf;border-bottom:1px solid var(--line)}
+.blob{opacity:.8}.b1{background:#79c0ff}.b2{background:#6ee7c8}.b3{background:#a7f0b3}
+h1 .w span{background:linear-gradient(110deg,#2b78d6,#0ea5a0 50%,#35c98a);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2::after{content:"";display:block;width:58px;height:5px;border-radius:9px;margin-top:10px;background:linear-gradient(90deg,var(--blue),var(--teal),var(--green))}
+footer h2::after{margin-inline:auto}
+.edu,.card,.ach,.lk{background:linear-gradient(180deg,#fff,#f1f9ff);border-color:var(--line);box-shadow:0 14px 34px -22px #2b78d680}
+.edu:hover,.card:hover,.ach:hover,.lk:hover{box-shadow:0 22px 44px -22px #2b78d6b0}
+.card::before{height:6px}
+.pill{background:linear-gradient(135deg,#cfe6ff,#ccf5e3);color:#175ea8}
+.tags span{background:#d3e8ff;color:#175ea8}
+.gpa{color:#0a918c!important}
+.gh{color:#0a918c}
+.thumb{border:2px solid #9fcfe6;box-shadow:0 8px 20px -12px #2b78d6aa}
+dialog img{border:1px solid var(--line)}
+.uni.empty{background:linear-gradient(150deg,#bfe0ff,#bff3dd)}
+.photo{background:linear-gradient(150deg,#b8dcff,#b6f0d9);border:3px solid #fff;box-shadow:0 28px 56px -24px #2b78d6a0}
+.ic,.lang i{background:linear-gradient(135deg,#2b78d6,#0ea5a0 60%,#35c98a)}
+.thumb{border:1.5px solid #b6dbec}
+dialog img{border:0}
+.bl{padding-inline-start:20px}
+.bl::before{color:inherit;font-size:2em;line-height:0;vertical-align:-.06em;margin-inline-end:.4em}
+html[lang=fa] .bl::before{position:relative;top:.2em}
+.gpa+.bl{margin-top:10px}
+.bl+.bl{margin-top:2px}
+/* Vazirmatn sits high in its line box: nudge pill text down. Tweak --nudge if needed */
+.pill{--nudge:.12em;line-height:1;padding:calc(.75em + var(--nudge)) 1.1em calc(.75em - var(--nudge))}
+html[lang=en] body{font-family:var(--head)}
+html[lang=en] .pill{--nudge:0em}
+
+/* ===== v3: abstract soft background, glass cards, refined shadows ===== */
+::selection{background:#bfe6f5}
+body{background:
+ radial-gradient(760px 640px at 88% 6%,#bfe0ff99 0,transparent 70%),
+ radial-gradient(680px 620px at 4% 20%,#b9f2dd99 0,transparent 70%),
+ radial-gradient(820px 700px at 96% 42%,#c9e6ff88 0,transparent 70%),
+ radial-gradient(700px 620px at 0 66%,#bff0e3aa 0,transparent 70%),
+ radial-gradient(800px 640px at 90% 90%,#c2defa99 0,transparent 70%),
+ #eef8fc;background-repeat:no-repeat}
+body::before{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;
+ background:radial-gradient(40% 35% at 30% 30%,#8fd3ff40 0,transparent 70%),radial-gradient(38% 32% at 72% 68%,#7ff0cf3a 0,transparent 70%);
+ animation:aurora 40s ease-in-out infinite alternate}
+@keyframes aurora{to{transform:translate3d(6%,-5%,0) scale(1.12)}}
+nav{inset:12px 12px auto 12px;border-radius:18px;border:1px solid #ffffffd0;background:#ffffffb0;backdrop-filter:blur(18px) saturate(1.3);box-shadow:0 10px 30px -14px #2b78d655}
+nav .wrap{height:56px}
+.edu,.card,.ach,.lk{background:linear-gradient(160deg,#ffffffe6,#f3faffcc);backdrop-filter:blur(14px) saturate(1.25);-webkit-backdrop-filter:blur(14px) saturate(1.25);border:1px solid #ffffffc0;
+ box-shadow:0 0 0 1px #bfe0ec99,0 1px 0 #fff inset,0 2px 4px #0d2b3a08,0 14px 26px -14px #2b78d638,0 34px 64px -30px #0ea5a05a}
+.edu:hover,.card:hover,.ach:hover,.lk:hover{box-shadow:0 0 0 1px #9fd0e6,0 1px 0 #fff inset,0 4px 8px #0d2b3a0a,0 20px 34px -14px #2b78d655,0 44px 80px -30px #0ea5a080}
+.photo{box-shadow:0 0 0 8px #ffffff8c,0 0 0 9px #bfe0ec,0 34px 64px -26px #2b78d6b0}
+.pill{box-shadow:inset 0 0 0 1px #ffffffb0,0 4px 10px -6px #2b78d655}
+.ic{box-shadow:0 10px 20px -8px #2b78d6aa,inset 0 1px 0 #ffffff55}
+.thumb{box-shadow:0 10px 22px -12px #2b78d6aa}
+.uni.empty{box-shadow:inset 0 0 0 1px #ffffffaa}
+dialog{box-shadow:0 40px 100px -24px #0a3a4acc}
+@media(prefers-reduced-motion:reduce){body::before{animation:none}}
+.ach .prow{flex-wrap:nowrap;align-items:flex-start;gap:10px;margin:14px 6px 6px}
+.ach .prow h3{flex:1;min-width:0;margin:0;font-size:1rem;text-wrap:balance}
+.ach .prow .pill{margin:0;align-self:flex-start}
+.ach .bl{padding-inline-start:0;font-size:.92rem}
+.ach .prow{align-items:center;margin:24px 6px 8px}
+.ach .prow .pill{align-self:center}
+html[lang=fa] .prow h3{padding-top:.1em}
+.card{padding:22px 26px 24px}
+.grid{gap:16px}
+.logo{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#2b78d6,#0ea5a0 60%,#35c98a);color:#fff;font:800 .95rem var(--head);letter-spacing:-.03em;box-shadow:0 10px 20px -8px #2b78d6aa,inset 0 1px 0 #ffffff55;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.logo:hover{transform:translateY(-2px) rotate(-3deg)}
+.card .prow{flex-wrap:nowrap;gap:10px}
+.card .prow h3{flex:1;min-width:0}
+@media(max-width:560px){.card{padding:20px 18px 22px}.card h3{font-size:1.3rem}}
+.nm{font-weight:800;color:var(--ink)}
+.nm.lat{font-family:var(--head);letter-spacing:.01em;unicode-bidi:isolate}
+.up{position:fixed;inset-inline-end:18px;bottom:20px;z-index:15;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#2b78d6,#0ea5a0 60%,#35c98a);box-shadow:0 14px 26px -10px #2b78d6bb,inset 0 1px 0 #ffffff55;opacity:0;transform:translateY(14px) scale(.9);pointer-events:none;transition:opacity .35s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.up.show{opacity:1;transform:none;pointer-events:auto}
+.up:hover{transform:translateY(-3px)}
+.up svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+#experience .bl+.bl{margin-top:6px}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top" aria-label="AmirMohammad Ganjizade"><span>AG</span></a>
+  <div class="nav-links"><a href="#education" data-i="n0"></a><a href="#experience" data-i="n2"></a><a href="#projects" data-i="n1"></a><a href="#achievements" data-i="n6"></a><a href="#contact" data-i="n4"></a></div>
+  <div class="lang" id="lang" data-l="fa"><i></i><button data-l="fa" class="on" aria-label="فارسی">FA</button><button data-l="en" aria-label="English">EN</button></div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap">
+    <div class="photo"><img src="images/me.png" alt="AmirMohammad Ganjizade"><span>AG</span></div>
+    <h1 id="name"></h1>
+    <p class="role" data-i="role"></p>
+  </div>
+</header>
+
+<main>
+<section id="education"><div class="wrap rv">
+  <h2 data-i="eduT"></h2>
+  <div class="edu spot">
+    <div class="uni"><img src="images/sbu-logo.svg" alt="Shahid Beheshti University logo"><span class="ph" data-i="ph2"></span></div>
+    <div>
+      <h3 data-i="e0t"></h3>
+      <p class="gpa" data-i="e0d"></p>
+      <p class="bl" data-i="e0g"></p>
+    </div>
+    <span class="when pill" data-i="e0w"></span>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap rv">
+  <h2 data-i="expT"></h2>
+  <div class="stack">
+    <div class="edu top spot">
+      <div class="uni"><img src="images/newbies.png" alt="Newbies 2025 contest logo"><span class="ph" data-i="ph2"></span></div>
+      <div>
+        <h3 data-i="e1t"></h3>
+        <p class="gpa" data-i="org"></p>
+        <p class="bl" data-i="e1a"></p>
+        <p class="bl" data-i="e1b"></p>
+        <p class="bl" data-i="e1c"></p>
+      </div>
+    <span class="when pill" data-i="e1w"></span>
+    </div>
+    <div class="edu top spot">
+      <div class="uni"><img src="images/sbu-logo.svg" alt="Shahid Beheshti University logo"><span class="ph" data-i="ph2"></span></div>
+      <div>
+        <h3 data-i="e2t"></h3>
+        <p class="gpa" data-i="org"></p>
+        <p class="bl" data-i="e2a"></p>
+        <p class="bl" data-i="e2b"></p>
+      </div>
+    <span class="when pill" data-i="e2w"></span>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2 class="rv" data-i="projT"></h2>
+  <div class="grid">
+    <div class="card big spot rv" style="--c:linear-gradient(90deg,#3b82c4,#14a3a8)">
+      <div class="prow"><h3>Planner</h3><span class="when pill" data-i="p1w"></span></div><p data-i="p1d"></p>
+      <div class="tags"><span>Laravel</span><span>Livewire</span><span>Tailwind CSS</span><span>MariaDB</span><span>Redis</span><span>Docker</span></div>
+      <a class="gh" href="https://github.com/AmirGjzh/Planner" target="_blank" rel="noopener" data-i="gh"></a>
+    </div>
+    <div class="card spot rv" style="--c:linear-gradient(90deg,#14a3a8,#4cb58a)">
+      <div class="prow"><h3>Starvel</h3><span class="when pill" data-i="p2w"></span></div><p data-i="p2d"></p>
+      <div class="tags"><span>PowerShell</span><span>Laravel</span><span>PHP</span><span>Node.js</span></div>
+      <a class="gh" href="https://github.com/AmirGjzh/Starvel" target="_blank" rel="noopener" data-i="gh"></a>
+    </div>
+    <div class="card spot rv" style="--c:linear-gradient(90deg,#4cb58a,#3b82c4)">
+      <div class="prow"><h3>XOShift Game AI</h3><span class="when pill" data-i="p3w"></span></div><p data-i="p3d"></p>
+      <div class="tags"><span>Python</span><span>Minimax</span><span>Alpha-Beta</span><span>Pygame</span></div>
+      <a class="gh" href="https://github.com/AmirGjzh/XOShift-Game" target="_blank" rel="noopener" data-i="gh"></a>
+    </div>
+    <div class="card big spot rv" style="--c:linear-gradient(90deg,#3b82c4,#4cb58a)">
+      <div class="prow"><h3>Text Compressor</h3><span class="when pill" data-i="p4w"></span></div><p data-i="p4d"></p>
+      <div class="tags"><span>C</span><span>Huffman Coding</span><span>CLI</span></div>
+      <a class="gh" href="https://github.com/AmirGjzh/Text-Compressor" target="_blank" rel="noopener" data-i="gh"></a>
+    </div>
+  </div>
+</div></section>
+
+<section id="achievements"><div class="wrap rv">
+  <h2 data-i="achT"></h2>
+  <div class="achs">
+    <div class="ach spot">
+      <button class="thumb" data-open data-al="view" aria-label="View"><img src="images/achievements/icpc2025.png" alt="ICPC Asia Tehran 2025 certificate" loading="lazy" decoding="async"><span class="ph" data-i="ph"></span></button>
+      <div class="prow"><h3 data-i="a1t"></h3><span class="when pill" data-i="a1w"></span></div>
+      <p class="bl" data-i="a1r"></p>
+      <p class="bl" data-i="a1d"></p>
+      <p class="bl" data-i="a1m"></p>
+    </div>
+    <div class="ach spot">
+      <button class="thumb" data-open data-al="view" aria-label="View"><img src="images/achievements/olympiad.png" alt="Tech Olympics 2025 certificate" loading="lazy" decoding="async"><span class="ph" data-i="ph"></span></button>
+      <div class="prow"><h3 data-i="a2t"></h3><span class="when pill" data-i="a2w"></span></div>
+      <p class="bl" data-i="a2r"></p>
+      <p class="bl" data-i="a2d"></p>
+    </div>
+    <div class="ach spot">
+      <button class="thumb" data-open data-al="view" aria-label="View"><img src="images/achievements/icpc2024.png" alt="ICPC Asia Tehran 2024 certificate" loading="lazy" decoding="async"><span class="ph" data-i="ph"></span></button>
+      <div class="prow"><h3 data-i="a3t"></h3><span class="when pill" data-i="a3w"></span></div>
+      <p class="bl" data-i="a3r"></p>
+      <p class="bl" data-i="a3d"></p>
+      <p class="bl" data-i="a3m"></p>
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer id="contact"><div class="wrap">
+  <h2 class="rv" data-i="ctT"></h2>
+  <div class="links">
+    <a class="lk spot rv" href="mailto:amir.futurefight@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg></span><span class="tx"><span class="lb" data-i="clE"></span><span class="v">amir.futurefight@gmail.com</span></span></a>
+    <a class="lk spot rv" href="https://github.com/AmirGjzh" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5.1 5.1 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5.1 5.1 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.3 6.6 6.4 7A3.4 3.4 0 0 0 9 18.1V22"/></svg></span><span class="tx"><span class="lb" data-i="clG"></span><span class="v">AmirGjzh</span></span></a>
+    <a class="lk spot rv" href="https://www.linkedin.com/in/amirmohammad-ganjizade-466673202" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span><span class="tx"><span class="lb" data-i="clL"></span><span class="v">AmirMohammad Ganjizade</span></span></a>
+  </div>
+</div></footer>
+
+<a class="up" href="#top" data-al="up" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+<dialog id="modal" aria-label="Image">
+  <button class="x" id="mx" aria-label="Close">×</button>
+  <img id="mimg" alt="" hidden>
+  <div class="mph" id="mph" hidden data-i="noimg"></div>
+</dialog>
+
+<script>
+const D={
+fa:{n0:"تحصیلات",n1:"پروژه‌ها",n2:"تجربه‌ها",n4:"ارتباط با من",n6:"دستاوردها",view:"مشاهدهٔ بزرگ‌تر عکس",up:"بازگشت به بالا",
+name:"سلام، من امیرمحمد گنجی‌زادم.",
+role:"علاقه‌مند به مهندسی نرم‌افزار و طراحی وب، با تجربهٔ شرکت در مسابقات برنامه‌نویسی و الگوریتمی.",
+eduT:"تحصیلات",org:"دانشکدهٔ مهندسی و علوم کامپیوتر، دانشگاه شهید بهشتی",e0t:"کارشناسی مهندسی کامپیوتر",e0d:"دانشگاه شهید بهشتی، تهران",e0w:"۱۴۰۲ تا اکنون",e0g:"معدل: ۱۷.۵۰ از ۲۰",
+ph:"جای عکس",ph2:"لوگو",noimg:"عکس هنوز اضافه نشده.",
+projT:"پروژه‌ها",gh:"مشاهده در گیتهاب",
+p1w:"تیر ۱۴۰۵ تا آبان ۱۴۰۵",p1d:"وب‌سایتی برای برنامه‌ریزی و مدیریت تسک‌ها و برنامه‌ها، دوزبانه و با تقویم شمسی، همراه با دسته‌بندی کارها و گزارش عملکرد.",
+p2w:"اردیبهشت ۱۴۰۵",p2d:"محیط توسعهٔ قابل‌حمل برای برنامه‌نویسان لاراول روی ویندوز؛ همهٔ ابزارهای لازم در یک پوشه و جابه‌جایی ساده میان نسخه‌ها.",
+p3w:"خرداد ۱۴۰۴",p3d:"بازی دونفره با رابط گرافیکی و هوش مصنوعی رقابتی که در کمتر از دو ثانیه حرکتش را انتخاب می‌کند و حدود ۹۹٪ بازی‌ها را مقابل بازیکن تصادفی می‌برد.",
+p4w:"دی ۱۴۰۲",p4d:"فشرده‌سازی فایل‌های متنی با زبان C، با کاهش حجم تا حدود ۴۰٪؛ آزمایش‌شده روی فایل‌هایی تا ۱۰ گیگابایت.",
+expT:"تجربه‌ها",
+e1t:"طراح مسئله، مسابقهٔ Newbies",e1w:"آبان ۱۴۰۴",e1a:"عضو تیم طراحی و تست سوالات مسابقه",e1b:"مسابقهٔ الگوریتمی ویژهٔ دانشکده، برای دانشجویان سال اول و دوم",e1c:"شرکت ۱۰ تیم در مسابقه",
+e2t:"دستیار آموزشی",e2w:"مهر ۱۴۰۳ تا خرداد ۱۴۰۴",e2a:"عضو تیم حل‌تمرین در درس‌های مبانی برنامه‌نویسی و برنامه‌نویسی پیشرفته",e2b:"همکاری در طول دو نیم‌سال تحصیلی",
+
+achT:"دستاوردها",
+a1w:"دی ۱۴۰۴",a2w:"مهر ۱۴۰۴",a3w:"آذر ۱۴۰۳",a1t:"ICPC تهران ۲۰۲۵",a1r:"رتبهٔ ۸ در رده‌بندی",a1d:"از میان ۸۶ تیم شرکت‌کننده",a1m:"تیم <b class='nm lat'>Leonardo Jupiter</b>",
+a2t:"المپیک فناوری ۲۰۲۵",a2r:"فینالیست شاخهٔ الگوریتم",a2d:"برگزار شده توسط <b class='nm'>کوئرا</b>",
+a3t:"ICPC تهران ۲۰۲۴",a3r:"رتبهٔ ۱۱ در رده‌بندی",a3d:"از میان ۸۱ تیم شرکت‌کننده",a3m:"تیم <b class='nm lat'>Error 402</b>",
+ctT:"ارتباط با من",clE:"ایمیل",clG:"گیتهاب",clL:"لینکدین"},
+en:{n0:"Education",n1:"Projects",n2:"Experiences",n4:"Contact",n6:"Achievements",view:"View larger image",up:"Back to top",
+name:"Hi, I’m AmirMohammad Ganjizade.",
+role:"Interested in software engineering and web design, with experience in programming and algorithmic contests.",
+eduT:"Education",org:"Faculty of Computer Science and Engineering, Shahid Beheshti University",e0t:"B.Sc. in Computer Engineering",e0d:"Shahid Beheshti University, Tehran",e0w:"2023 – Present",e0g:"GPA: 17.50 / 20",
+ph:"Photo placeholder",ph2:"Logo",noimg:"The image hasn’t been added yet.",
+projT:"Projects",gh:"View on GitHub",
+p1w:"Jul 2026 – Nov 2026",p1d:"A website for planning and managing tasks and plans, bilingual with a Jalali calendar, plus categories and performance reports.",
+p2w:"May 2026",p2d:"A portable development environment for Laravel developers on Windows, with all the tools in one folder and easy switching between versions.",
+p3w:"Jun 2025",p3d:"A two-player board game with a graphical interface and a competitive AI that picks its move in under two seconds, winning about 99% of games against a random player.",
+p4w:"Jan 2024",p4d:"Compression of text files in C, reducing size by up to about 40% and tested on files up to 10 GB.",
+expT:"Experiences",
+e1t:"Problem Setter, Newbies Contest",e1w:"Nov 2025",e1a:"Member of the contest problem-setting and testing team",e1b:"A faculty algorithmic contest for first- and second-year students",e1c:"10 teams took part",
+e2t:"Teaching Assistant",e2w:"Oct 2024 – Jun 2025",e2a:"Member of the assignment-solutions team for Fundamentals of Programming and Advanced Programming",e2b:"Worked across two academic semesters",
+
+achT:"Achievements",
+a1w:"Dec 2025",a2w:"Oct 2025",a3w:"Dec 2024",a1t:"ICPC Tehran 2025",a1r:"Ranked as 8th in the standings",a1d:"Out of 86 participating teams",a1m:"Team <b class='nm lat'>Leonardo Jupiter</b>",
+a2t:"Tech Olympics 2025",a2r:"Algorithm track finalist",a2d:"Organized by <b class='nm lat'>Quera</b>",
+a3t:"ICPC Tehran 2024",a3r:"Ranked as 11th in the standings",a3d:"Out of 81 participating teams",a3m:"Team <b class='nm lat'>Error 402</b>",
+ctT:"Contact",clE:"Email",clG:"GitHub",clL:"LinkedIn"}
+};
+const $=s=>document.querySelector(s);
+function buildName(t){
+  const n=$('#name');n.innerHTML='';
+  t.split(' ').forEach((w,i)=>{
+    const o=document.createElement('span');o.className='w';
+    const s=document.createElement('span');s.textContent=w;s.style.animationDelay=(.25+i*.18)+'s';
+    o.appendChild(s);n.appendChild(o);
+  });
+}
+function setLang(l,first){
+  const d=D[l];
+  document.documentElement.lang=l;document.documentElement.dir=l==='fa'?'rtl':'ltr';
+  document.querySelectorAll('[data-i]').forEach(e=>e.innerHTML=d[e.dataset.i]);
+  document.querySelectorAll('[data-al]').forEach(e=>e.setAttribute('aria-label',d[e.dataset.al]));
+  buildName(d.name);
+  $('#lang').dataset.l=l;
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+let saved='fa';try{saved=localStorage.getItem('lang')||'fa'}catch(e){}
+setLang(saved);
+
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach((e,i)=>{e.style.transitionDelay=(e.classList.contains('card')?(i%2)*.12:0)+'s';io.observe(e)});
+
+// back-to-top button
+const upBtn=$('.up');
+const onScroll=()=>upBtn.classList.toggle('show',scrollY>520);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// image modal
+const dlg=$('#modal'),mimg=$('#mimg'),mph=$('#mph');
+// images: show the placeholder if a file is missing
+document.querySelectorAll('img[src]').forEach(img=>{
+  const miss=()=>img.parentElement.classList.add('empty');
+  img.addEventListener('error',miss);
+  if(img.complete&&!img.naturalWidth)miss();
+});
+document.querySelectorAll('.ach').forEach(c=>{
+  const img=c.querySelector('img');
+  c.querySelector('[data-open]').addEventListener('click',()=>{
+    const empty=!img.naturalWidth;
+    mimg.hidden=empty;mph.hidden=!empty;
+    if(!empty)mimg.src=img.currentSrc||img.src;
+    dlg.showModal();
+  });
+});
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+$('#mx').addEventListener('click',()=>dlg.close());
+
+</script>
+</body>
+</html>
