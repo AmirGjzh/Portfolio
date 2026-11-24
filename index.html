@@ -244,11 +244,11 @@ html[lang=en] .btn-resume{font-family:var(--head)}
     <h1 id="name"></h1>
     <p class="role" data-i="role"></p>
     <div class="hero-cta">
-      <a class="btn-resume primary" href="./resume/resume.pdf" target="_blank" rel="noopener">
+      <a class="btn-resume primary" href="resume/resume.pdf" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
         <span data-i="viewR"></span>
       </a>
-      <a class="btn-resume secondary" href="./resume/resume.pdf" download="AmirMohammad-Ganjizade-Resume.pdf">
+      <a class="btn-resume secondary" href="resume/resume.pdf" download="AmirMohammad-Ganjizade-Resume.pdf">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
         <span data-i="dlR"></span>
       </a>
@@ -461,14 +461,6 @@ document.querySelectorAll('.ach').forEach(c=>{
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 $('#mx').addEventListener('click',()=>dlg.close());
 
-// ensure resume links resolve correctly across GitHub Pages and custom domain
-try{
-  let b=window.location.pathname;
-  if(!b.endsWith('/')&&!b.endsWith('.html'))b+='/';
-  else if(b.endsWith('.html'))b=b.substring(0,b.lastIndexOf('/')+1);
-  const pdfUrl=window.location.origin+b+'resume/resume.pdf';
-  document.querySelectorAll('a[href*="resume.pdf"]').forEach(a=>a.href=pdfUrl);
-}catch(e){}
 </script>
 </body>
 </html>
