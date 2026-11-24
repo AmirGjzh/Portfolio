@@ -219,6 +219,15 @@ html[lang=fa] .prow h3{padding-top:.1em}
 .up:hover{transform:translateY(-3px)}
 .up svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 #experience .bl+.bl{margin-top:6px}
+/* resume buttons in hero */
+.hero-cta{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:28px;opacity:0;animation:up .9s 1.1s forwards}
+.btn-resume{display:inline-flex;align-items:center;gap:9px;padding:12px 26px;border-radius:99px;font:600 .98rem var(--font);text-decoration:none;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,background .35s,border-color .35s}
+html[lang=en] .btn-resume{font-family:var(--head)}
+.btn-resume svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.btn-resume.primary{background:linear-gradient(135deg,#2b78d6,#0ea5a0 60%,#35c98a);color:#fff;box-shadow:0 14px 28px -10px #2b78d6aa,inset 0 1px 0 #ffffff44}
+.btn-resume.primary:hover{transform:translateY(-3px);box-shadow:0 20px 38px -12px #2b78d6cc}
+.btn-resume.secondary{background:linear-gradient(160deg,#fffffff0,#f0f8ffcc);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid var(--line);color:var(--ink);box-shadow:0 10px 24px -12px #2b78d640}
+.btn-resume.secondary:hover{transform:translateY(-3px);color:var(--teal);border-color:var(--teal);box-shadow:0 18px 34px -14px #14a3a870}
 </style>
 </head>
 <body>
@@ -234,6 +243,16 @@ html[lang=fa] .prow h3{padding-top:.1em}
     <div class="photo"><img src="images/me.png" alt="AmirMohammad Ganjizade"><span>AG</span></div>
     <h1 id="name"></h1>
     <p class="role" data-i="role"></p>
+    <div class="hero-cta">
+      <a class="btn-resume primary" href="./resume/resume.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span data-i="viewR"></span>
+      </a>
+      <a class="btn-resume secondary" href="./resume/resume.pdf" download="AmirMohammad-Ganjizade-Resume.pdf">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+        <span data-i="dlR"></span>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -369,7 +388,7 @@ achT:"دستاوردها",
 a1w:"دی ۱۴۰۴",a2w:"مهر ۱۴۰۴",a3w:"آذر ۱۴۰۳",a1t:"ICPC تهران ۲۰۲۵",a1r:"رتبهٔ ۸ در رده‌بندی",a1d:"از میان ۸۶ تیم شرکت‌کننده",a1m:"تیم <b class='nm lat'>Leonardo Jupiter</b>",
 a2t:"المپیک فناوری ۲۰۲۵",a2r:"فینالیست شاخهٔ الگوریتم",a2d:"برگزار شده توسط <b class='nm'>کوئرا</b>",
 a3t:"ICPC تهران ۲۰۲۴",a3r:"رتبهٔ ۱۱ در رده‌بندی",a3d:"از میان ۸۱ تیم شرکت‌کننده",a3m:"تیم <b class='nm lat'>Error 402</b>",
-ctT:"ارتباط با من",clE:"ایمیل",clG:"گیتهاب",clL:"لینکدین"},
+viewR:"مشاهدهٔ رزومه",dlR:"دانلود رزومه",ctT:"ارتباط با من",clE:"ایمیل",clG:"گیتهاب",clL:"لینکدین"},
 en:{n0:"Education",n1:"Projects",n2:"Experiences",n4:"Contact",n6:"Achievements",view:"View larger image",up:"Back to top",
 name:"Hi, I’m AmirMohammad Ganjizade.",
 role:"Interested in software engineering and web design, with experience in programming and algorithmic contests.",
@@ -388,7 +407,7 @@ achT:"Achievements",
 a1w:"Dec 2025",a2w:"Oct 2025",a3w:"Dec 2024",a1t:"ICPC Tehran 2025",a1r:"Ranked as 8th in the standings",a1d:"Out of 86 participating teams",a1m:"Team <b class='nm lat'>Leonardo Jupiter</b>",
 a2t:"Tech Olympics 2025",a2r:"Algorithm track finalist",a2d:"Organized by <b class='nm lat'>Quera</b>",
 a3t:"ICPC Tehran 2024",a3r:"Ranked as 11th in the standings",a3d:"Out of 81 participating teams",a3m:"Team <b class='nm lat'>Error 402</b>",
-ctT:"Contact",clE:"Email",clG:"GitHub",clL:"LinkedIn"}
+viewR:"View Résumé",dlR:"Download PDF",ctT:"Contact",clE:"Email",clG:"GitHub",clL:"LinkedIn"}
 };
 const $=s=>document.querySelector(s);
 function buildName(t){
@@ -442,6 +461,14 @@ document.querySelectorAll('.ach').forEach(c=>{
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 $('#mx').addEventListener('click',()=>dlg.close());
 
+// ensure resume links resolve correctly across GitHub Pages and custom domain
+try{
+  let b=window.location.pathname;
+  if(!b.endsWith('/')&&!b.endsWith('.html'))b+='/';
+  else if(b.endsWith('.html'))b=b.substring(0,b.lastIndexOf('/')+1);
+  const pdfUrl=window.location.origin+b+'resume/resume.pdf';
+  document.querySelectorAll('a[href*="resume.pdf"]').forEach(a=>a.href=pdfUrl);
+}catch(e){}
 </script>
 </body>
 </html>
